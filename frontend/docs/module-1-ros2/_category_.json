@@ -1,0 +1,8 @@
+{
+  "label": "Module 1: ROS 2 (Weeks 3-5)",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Introduction to ROS 2 for humanoid robotics development. Learn the fundamentals of robot operating system architecture, communication patterns, and humanoid-specific applications."
+  }
+}

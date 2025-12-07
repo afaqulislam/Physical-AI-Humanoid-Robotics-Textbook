@@ -1,0 +1,8 @@
+{
+  "label": "Module 4: VLA & Humanoids (Weeks 11-13)",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "description": "Vision-Language-Action systems for humanoid robotics. Learn voice commands with Whisper, cognitive planning using LLMs, human-robot interaction, and capstone project development."
+  }
+}

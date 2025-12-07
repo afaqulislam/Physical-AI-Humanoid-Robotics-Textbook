@@ -1,55 +1,92 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+SYNC IMPACT REPORT
+Version change: 1.0.0 → 1.0.1
+Modified principles: Educational Excellence and Technical Accuracy (enhanced with Physical AI focus), Technical Standards and Content Guidelines (expanded with detailed weekly breakdown)
+Added sections: Hardware Requirements & Lab Architecture section
+Removed sections: N/A
+Templates requiring updates:
+  - .specify/templates/plan-template.md ⚠ pending (Constitution Check section should reference new principles)
+  - .specify/templates/spec-template.md ⚠ pending (may need to align with educational content requirements)
+  - .specify/templates/tasks-template.md ⚠ pending (may need to reflect textbook-specific task types)
+Follow-up TODOs: None
+-->
+# Physical AI & Humanoid Robotics Textbook Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Educational Excellence and Technical Accuracy
+All content, formulas, physics, algorithms, and code must be correct, verifiable, and cite sources where applicable. Learning objectives, prerequisites, and expected outcomes must be clearly defined for each module and chapter. Content must cover Physical AI principles, ROS 2 control, Gazebo/Unity simulation, NVIDIA Isaac development, humanoid robot design, and GPT-integrated conversational robotics.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### Structured Learning Progression
+Chapters must follow a logical learning progression from fundamentals to advanced topics. Each chapter must include Learning Objectives, Prerequisites, Content (Theory → Examples → Applications), Summary, Exercises, and References. Content must follow the detailed weekly schedule with specific topics for each module.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Practical Implementation Focus
+All code examples must be complete, runnable, safe, and versioned. Prefer widely-used libraries (ROS 2, Python, NumPy, PyTorch). Include hands-on exercises and simulations aligned with each module. Weekly projects must align with each module (ROS 2, Gazebo simulation, Isaac perception pipeline).
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### Multi-Platform Integration
+Content must integrate ROS 2, Gazebo, Unity, NVIDIA Isaac, and Vision-Language-Action systems. Support sim-to-real transfer and include hardware setup notes (RTX PC, Jetson Orin kits, RealSense sensors). Emphasize sim-to-real considerations, latency issues, and performance trade-offs.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### Accessibility and Performance
+Docusaurus-based publishing must optimize for accessibility, search, and performance (fast load, LCP < 2.5s, CLS < 0.1). Include metadata for every file and maintain proper sidebar hierarchy. Ensure content is accessible to students, engineers, and AI enthusiasts learning to design, simulate, control, and deploy humanoid robots.
 
-### [PRINCIPLE_6_NAME]
+### Future-Proofing and Extensibility
+Content must support RAG chatbot integration, personalization, multi-language support (including Urdu), and Claude Code Subagent integration. Maintain flexibility for additional modules. Bridge the gap between digital brain and physical body; students apply AI knowledge to control humanoid robots in simulated and real-world environments.
 
+## Technical Standards and Content Guidelines
+Content must focus on the theme of AI Systems in the Physical World and Embodied Intelligence, bridging the gap between digital brain and physical body. Content must include descriptive alt text for diagrams, images in `/static/img/[chapter-name]/` (SVG preferred), and complete runnable code examples. Weekly schedule with detailed topics:
 
-[PRINCIPLE__DESCRIPTION]
+- **Weeks 1-2: Introduction to Physical AI**
+  - Foundations of Physical AI and embodied intelligence
+  - From digital AI to robots that understand physical laws
+  - Overview of humanoid robotics landscape
+  - Sensor systems: LIDAR, cameras, IMUs, force/torque sensors
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+- **Weeks 3-5: Module 1 – The Robotic Nervous System (ROS 2)**
+  - Focus: Middleware for robot control
+  - Topics: ROS 2 nodes, topics, services, actions
+  - Bridging Python agents to ROS controllers using `rclpy`
+  - Understanding URDF (Unified Robot Description Format) for humanoids
+  - ROS 2 package development project
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+- **Weeks 6-7: Module 2 – The Digital Twin (Gazebo & Unity)**
+  - Focus: Physics simulation and environment building
+  - Topics: Simulating physics, gravity, collisions in Gazebo
+  - High-fidelity rendering and human-robot interaction in Unity
+  - Simulating sensors: LiDAR, Depth Cameras, and IMUs
+  - Gazebo simulation implementation project
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+- **Weeks 8-10: Module 3 – The AI-Robot Brain (NVIDIA Isaac)**
+  - Focus: Advanced perception and training
+  - Topics: NVIDIA Isaac Sim photorealistic simulation and synthetic data generation
+  - Isaac ROS: Hardware-accelerated VSLAM and navigation
+  - Nav2 path planning for bipedal humanoid movement
+  - Reinforcement learning for robot control
+  - Sim-to-real transfer techniques
+  - Isaac-based perception pipeline project
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+- **Weeks 11-12: Module 4 – Vision-Language-Action (VLA)**
+  - Focus: Convergence of LLMs and robotics
+  - Voice-to-Action using OpenAI Whisper
+  - Cognitive planning: translating natural language commands into ROS 2 actions
+  - Humanoid robot kinematics, dynamics, bipedal locomotion, balance control, manipulation and grasping, human-robot interaction design
+
+- **Week 13: Capstone Project – The Autonomous Humanoid**
+  - Integrate ROS 2, Gazebo/Isaac simulation, VLA, and conversational AI
+  - Robot receives voice command, plans path, navigates obstacles, identifies objects using computer vision, and manipulates them
+
+## Hardware Requirements & Lab Architecture
+- Module-specific hardware setups: RTX-enabled workstation (Isaac Sim/Gazebo/Unity), Edge AI Kit (Jetson Orin Nano, RealSense camera, IMU, USB mic), and optional humanoid robot for sim-to-real deployment
+- Lab options:
+  - Proxy approach (Unitree Go2 Edu or robotic arm)
+  - Miniature humanoid (Hiwonder TonyPi, Unitree G1 or Robotis OP3)
+  - Premium lab (Unitree G1 Humanoid)
+- Cloud-based alternatives: AWS RoboMaker, NVIDIA Omniverse Cloud, with Jetson kits for local deployment
+- Emphasize sim-to-real considerations, latency issues, and performance trade-offs
+
+## Development Workflow and Quality Gates
+Follow Spec-Kit workflow: Constitution → Specification → Plan → Tasks → Implementation. Pre-merge gates: Docusaurus build validation, broken link check, code & formula accuracy, accessibility, SEO, performance. Include ADRs for important design choices. Weekly projects aligned with each module (ROS 2, Gazebo simulation, Isaac perception pipeline) and capstone project: fully autonomous humanoid with voice, vision, navigation, and manipulation.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+This Constitution governs all development of the Physical AI & Humanoid Robotics textbook. All content must comply with these principles. Amendments require documentation of rationale and impact assessment. All PRs/reviews must verify compliance with educational standards, technical accuracy, and quality gates.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.1 | **Ratified**: 2025-12-06 | **Last Amended**: 2025-12-06

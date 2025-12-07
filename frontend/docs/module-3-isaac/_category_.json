@@ -1,0 +1,8 @@
+{
+  "label": "Module 3: NVIDIA Isaac (Weeks 8-10)",
+  "position": 6,
+  "link": {
+    "type": "generated-index",
+    "description": "NVIDIA Isaac platform for humanoid robotics. Learn Isaac Sim for photorealistic simulation, Isaac ROS acceleration stack, and Nav2 for humanoid motion planning."
+  }
+}
