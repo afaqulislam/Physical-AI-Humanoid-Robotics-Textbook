@@ -1,0 +1,139 @@
+/* Modern Call To Action Section Styles */
+.callToAction {
+  background: linear-gradient(135deg, 
+    var(--ifm-color-primary) 0%, 
+    var(--ifm-color-primary-darker) 100%);
+  color: var(--ifm-background-color);
+  padding: 6rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.callToAction::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top right, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    transparent 40%);
+  pointer-events: none;
+}
+
+.callToAction::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at bottom left, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    transparent 40%);
+  pointer-events: none;
+}
+
+.ctaContainer {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.ctaTitle {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-background-color);
+}
+
+.ctaSubtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+.ctaButton {
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-color-primary);
+  border: 2px solid var(--ifm-background-color);
+  padding: 1.2rem 2.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 250px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.ctaButton:hover {
+  background-color: transparent;
+  color: var(--ifm-background-color);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.buttonIcon {
+  font-size: 1.3rem;
+}
+
+/* Subtle animation for the CTA */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.ctaContainer {
+  animation: float 6s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .callToAction {
+    padding: 4rem 0;
+  }
+  
+  .ctaTitle {
+    font-size: 2.2rem;
+  }
+  
+  .ctaSubtitle {
+    font-size: 1.1rem;
+  }
+  
+  .ctaButton {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .ctaTitle {
+    font-size: 1.8rem;
+  }
+  
+  .ctaButton {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+}
