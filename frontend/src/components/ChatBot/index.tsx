@@ -21,7 +21,7 @@ export default function ChatBot(): JSX.Element {
     const [messages, setMessages] = useState<Message[]>([
         {
             role: "bot",
-            text: "Hi, I am the your assistant. Ask me anything related to books.",
+            text: "Hi, I am your assistant. Ask me anything related to books.",
         },
     ]);
     const [input, setInput] = useState<string>("");

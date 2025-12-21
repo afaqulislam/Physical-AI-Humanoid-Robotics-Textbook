@@ -212,6 +212,7 @@
 
   .featureCard {
     max-width: 420px;
+    min-height: 300px;
     flex: 0 0 auto;
     scroll-snap-align: start;
   }

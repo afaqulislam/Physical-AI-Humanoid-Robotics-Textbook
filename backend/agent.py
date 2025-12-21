@@ -35,12 +35,12 @@ qdrant = QdrantClient(
 COLLECTION_NAME = os.getenv("COLLECTION_NAME")
 
 client = AsyncOpenAI(
-    api_key=os.getenv("GEMINI_API_KEY"),
-    base_url=os.getenv("GEMINI_BASE_URL"),
+    api_key=os.getenv("OPENROUTER_API_KEY"),
+    base_url=os.getenv("OPENROUTER_BASE_URL"),
 )
 
 model = OpenAIChatCompletionsModel(
-    model=os.getenv("GEMINI_MODEL"),
+    model=os.getenv("OPENROUTER_MODEL"),
     openai_client=client,
 )
 

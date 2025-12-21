@@ -66,7 +66,7 @@ This textbook project is built as a modern full-stack application with the follo
 - **AI Integration**: Semantic search and retrieval-augmented generation (RAG) system
 - **Database**: [Qdrant](https://qdrant.tech/) (vector similarity search engine)
 - **Embeddings**: [Sentence Transformers](https://www.sbert.net/) (`all-MiniLM-L6-v2`)
-- **LLM Integration**: Google Gemini API for question answering
+- **LLM Integration**: OpenRouter API for question answering
 
 ## 🛠️ Technical Requirements
 
@@ -109,7 +109,7 @@ This textbook project is built as a modern full-stack application with the follo
 - Node.js >= 20.0
 - Python 3.8+
 - Git
-- Access to Google Gemini API (for LLM integration)
+- Access to OpenRouter API (for LLM integration)
 
 ### Environment Variables
 
@@ -120,9 +120,9 @@ SITEMAP_URL= # URL to your textbook sitemap
 COLLECTION_NAME= # Qdrant collection name
 QDRANT_URL= # Qdrant cluster URL
 QDRANT_API_KEY= # Qdrant API key
-GEMINI_API_KEY= # Google Gemini API key
-GEMINI_BASE_URL= # Google Gemini API base URL
-GEMINI_MODEL= # Model name (e.g., gemini-1.5-pro)
+OPENROUTER_API_KEY= # OpenRouter API key
+OPENROUTER_BASE_URL= # OpenRouter API base URL
+OPENROUTER_MODEL= # Model name
 ```
 
 #### Frontend
@@ -201,10 +201,6 @@ Contributions to improve the textbook content, fix bugs, or enhance features are
 3. Commit your changes (`git commit -m 'Add amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 👨‍🏫 About the Author
 

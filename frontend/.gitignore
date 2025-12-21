@@ -3,7 +3,8 @@
 
 # Production
 /build
-
+./.env
+.env
 # Generated files
 .docusaurus
 .cache-loader
