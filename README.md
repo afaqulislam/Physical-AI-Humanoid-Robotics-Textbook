@@ -202,10 +202,6 @@ Contributions to improve the textbook content, fix bugs, or enhance features are
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 👨‍🏫 About the Author
 
 Built with ❤️ by **Afaq Ul Islam** - Dedicated to advancing the field of Physical AI and making humanoid robotics education accessible to everyone.
