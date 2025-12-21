@@ -28,10 +28,6 @@
   height: 4px;
   background: linear-gradient(90deg, var(--ifm-color-primary), var(--ifm-color-primary-darker));
   border-radius: 2px;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
 }
 
 .sectionSubtitle {
@@ -143,6 +139,9 @@
   font-size: 1.1rem;
 }
 
+/* ================================
+   Typography Tweaks
+================================ */
 @media (max-width: 768px) {
   .testimonialsSection {
     padding: 3rem 0;
@@ -175,5 +174,31 @@
   
   .testimonialCard {
     padding: 1.5rem;
+  }
+}
+
+/* ================================
+   MOBILE HORIZONTAL SCROLL
+   Below 680px
+================================ */
+@media (max-width: 680px) {
+  .testimonialsGrid {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 0 1rem;
+  }
+
+  .testimonialCard {
+    max-width: 300px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  /* Optional: hide scrollbar in WebKit browsers */
+  .testimonialsGrid::-webkit-scrollbar {
+    display: none;
   }
 }
